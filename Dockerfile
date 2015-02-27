@@ -21,4 +21,6 @@ RUN dpkg -i /home/ubuntu/couchbase-server-enterprise_2.2.0_x86_64.deb
 
 ADD start-couchbase.sh /start-couchbase.sh
 
+RUN chmod +x start-couchbase.sh
+
 CMD ["/start-couchbase.sh"]

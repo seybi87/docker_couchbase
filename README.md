@@ -1,7 +1,7 @@
 # Docker for Couchbase 2.2 
 
 This docker image is set up for running Couchbase 2.2 on a VM on Openstack (or other Cloud stacks)
-This project was partly inspired by [ncolomer/couchbas](https://registry.hub.docker.com/u/ncolomer/couchbase/).
+This project was partly inspired by [ncolomer/couchbase](https://registry.hub.docker.com/u/ncolomer/couchbase/).
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ Add the following lines at the end of the `/etc/init/docker.conf` file:
 	limit memlock unlimited unlimited
 	limit nofile 262144
 
-Finally, restart the Docker daemon: `/etc/init.d/docker restart`.
+Finally, restart the Docker daemon: sudo service docker.io restart
 
 ## Start a Couchbase Node with all client ports exposed
 
