@@ -1,0 +1,1 @@
+Couchbase 2.2 community without preconfiguration
