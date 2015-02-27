@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 #21100
 portRangeStart=21100;
@@ -18,4 +18,4 @@ done
 
 #echo $portlist
 
-docker run -d -v /home/core/data/couchbase:/opt/couchbase/var $portlist dustin/couchbase
+docker run -d -v --net=host $portlist dseybold/docker-couchbase

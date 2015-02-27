@@ -3,7 +3,7 @@ FROM ubuntu:latest
 USER root
 
 
-MAINTAINER daniel seybold <ds@bold.de>
+MAINTAINER daniel seybold <daniel.seybold@uni-ulm.de>
 
 RUN export DEBIAN_FRONTEND=noninteractive
 
