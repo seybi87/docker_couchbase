@@ -6,10 +6,19 @@ This project was partly inspired by [ncolomer/couchbase](https://registry.hub.do
 ## Prerequisites
 
 You need to override memlock and nofile limits to make Couchbase run correctly. 
-Add the following lines at the end of the `/etc/init/docker.conf` file:
-
+Add the following lines at the beginning after description of the `/etc/init/docker.conf` file:
+	
+	description "Docker daemon"
+	
+	start on (local-filesystems and net-device-up IFACE!=lo)
+	stop on runlevel [!2345]
+	limit nofile 65536 65536
 	limit memlock unlimited unlimited
-	limit nofile 262144
+	limit core unlimited unlimited
+	
+	respawn
+	
+	...
 
 Finally, restart the Docker daemon: `sudo service docker.io restart`
 
